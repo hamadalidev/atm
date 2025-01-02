@@ -1,9 +1,8 @@
-
 from django.shortcuts import render
+from django.views import View
 
 # Create your views here.
 
-class MachinePage():
-
-    def index(request):
-        return render(request,'index.html')
+class MachinePage(View):
+    def index(self, request):
+        return render(request, 'index.html')
